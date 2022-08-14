@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style>
+        #todoapp ul {
+            list-style-type: none;
+        }
+
+        #todo-list input.edit {
+            display: none;
+        }
+
+        #todo-list .editing label {
+            display: none;
+        }
+
+        #todo-list .editing input.edit {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+<section id="todoapp">
+    <header id="header">
+        <h1>{{ title }}</h1>
+        <input id="new-todo" placeholder="What needs to be done?">
+        <div>
+            <a href="#/all">show all</a> |
+            <a href="#/pending">show pending</a> |
+            <a href="#/completed">show completed</a>
+        </div>
+
+    </header>
+    <section id="main">
+        <ul id="todo-list"></ul>
+    </section>
+</section>
+
+<script type="text/template" id="item-template">
+    <input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %> />
+    <label><%- title %></label>
+    <input class="edit" value="<%- title %>"/>
+    <button class="remove">remove</button>
+</script>
+
+<script src="/static/jquery.min.js"></script>
+<script src="/static/underscore-min.js"></script>
+<script src="/static/backbone-min.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.16/backbone.localStorage-min.js    "></script>
+<script src="/static//app.js"></script>
+</body>
+
+</html>
