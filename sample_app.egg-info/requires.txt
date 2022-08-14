@@ -1,6 +1,0 @@
-pyramid
-waitress
-pyramid_jinja2
-
-[dev]
-pyramid_debugtoolbar
