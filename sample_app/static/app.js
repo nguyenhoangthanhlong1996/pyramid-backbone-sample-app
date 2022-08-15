@@ -117,6 +117,7 @@ var AppView = Backbone.View.extend({
     el: '#todoapp',
     initialize: function () {
         this.input = this.$('#new-todo');
+        console.log(this.input);
         todoCollection.on('add', this.render, this);
         todoCollection.on('reset', this.render, this);
         todoCollection.fetch();

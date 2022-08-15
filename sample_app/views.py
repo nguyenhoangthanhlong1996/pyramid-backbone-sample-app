@@ -24,6 +24,7 @@ class TodoRestView(object):
         id = int(self.request.matchdict['id'])
         return TodoService.delete(id=id)
 
+
 class TodoPageView(object):
     def __init__(self, request):
         self.request = request
